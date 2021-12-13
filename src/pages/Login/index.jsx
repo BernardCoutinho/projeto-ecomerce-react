@@ -49,8 +49,6 @@ export default function Login({navigation}){
                         title="Login"
                         />
                 </View>   
-        
             </View>
         );
-    
 }

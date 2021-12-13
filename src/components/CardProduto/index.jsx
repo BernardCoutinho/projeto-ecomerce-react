@@ -2,9 +2,10 @@ import React from 'react';
 import {View, Image, Stylesheet, Text} from 'react-native'
 import {styles} from "./styles"
 import {Button} from 'react-native-elements'
-import DetalheProduto from '../DetalheProduto';
+import DetalheProduto from '../../pages/DetalheProduto';
 
-export default function CardProduto(props){
+export default function CardProduto(props, {navigation}){
+    
 
     return(
         <View style={styles.container}>
@@ -13,9 +14,11 @@ export default function CardProduto(props){
                         style={styles.img}/>      
             </View>
             <View>
-                <Text>preço = {props.price} </Text>
-                <Text>titulo= {props.titulo} </Text>
-                <Button value={props.id} onClick={DetalheProduto} />
+                <Text>preco={props.price} </Text>
+                <Text>titulo={props.titulo} </Text>
+                <Button  onClick={() =>{
+                    navigation.navigate("DetalheProduto")
+                } } />
             </View>
                 
         </View>

@@ -29,17 +29,18 @@ export const style = StyleSheet.create({
 
     logo:{
         
-        fontSize: "250%",
+        fontSize: 10,
+        
     },
     
     inputTxt:{
         width: "80%",
         height: 40,
         marginTop: "5%",
-        backgroundColor:"#F8F8FF",
+        // backgroundColor:"#F8F8FF",
         borderRadius: 5,
-        padding: "6%",
-        borderWidth: "1px",
+        padding: 10,
+        borderWidth: 1,
         borderColor: "grey",
 
     },

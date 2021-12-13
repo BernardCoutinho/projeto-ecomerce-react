@@ -15,8 +15,5 @@ export default function Home(){
                 <Produtos />
             </View>
         </View>
-           
-
-
     )
 }
