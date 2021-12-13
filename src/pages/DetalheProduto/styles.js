@@ -4,12 +4,15 @@ export  const style = StyleSheet.create({
 
     container:{
         flex:1,
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'pink',
-
-        
+        width: 80,
+        height: 80,
+        backgroundColor: 'red',
     },
+
+    img:{
+        width:20,
+        height:20,
+    }
     
     
 
