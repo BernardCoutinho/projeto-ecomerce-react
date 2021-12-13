@@ -16,10 +16,11 @@ export default function CardProduto(props){
                 <Image  source={{uri: props.uri}}
                         style={styles.img}/>      
             </View>
+
             <View>
                 <Text>preco={props.price} </Text>
                 <Text>titulo={props.titulo} </Text>
-                <Button  onPress={() =>{
+                <Button  title="Detalhe" onPress={() =>{
                     navigation.navigate("Detalhe", {id: props.id})
                 } } />
             </View>
