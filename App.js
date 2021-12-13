@@ -1,23 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from './src/pages/Home';
-import Carrinho from './src/pages/Carrinho';
-import Login from './src/pages/Login'
+import { createStackNavigator } from '@react-navigation/stack';
 
+import Login from './src/pages/Login'
+import Tabs from './src/components/Rotas'
+import { NavigationContainer } from '@react-navigation/native';
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  const Tab = createBottomTabNavigator();
   return (
-    <NavigationContainer >
-    <Tab.Navigator  initialRouteName="Login" screenOptions={ {tabBarVisible: false}}>
-      <Tab.Screen name="Login" component={Login} options={{tabBarVisible: false}}/>
-    <Tab.Screen name="Carrinho" component={Carrinho}/>
-        <Tab.Screen name="Home" component={Home}/>
-    </Tab.Navigator>
-    </NavigationContainer>
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen options={{headerShown: false}} name={"Login"} component={Login} />
+      <Stack.Screen name={"Tabs"} component={Tabs} />
+    </Stack.Navigator> 
+    </NavigationContainer>   
+    
   );
 }
 

@@ -12,10 +12,12 @@ export default function Login({navigation}){
     const [senha, setSenha] = useState("");
     const [email, setEmail] = useState("");
 
+    
     const validar = () =>{
         if(senha == senhaCerta && email == emailCerto){
-            navigation.navigate("Home")
+            navigation.navigate("Tabs")
         }
+
 
     }
         return(
