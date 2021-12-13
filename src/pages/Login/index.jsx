@@ -15,7 +15,7 @@ export default function Login({navigation}){
     
     const validar = () =>{
         if(senha == senhaCerta && email == emailCerto){
-            navigation.navigate("Tabs")
+            navigation.navigate("Logout")
         }
 
 
