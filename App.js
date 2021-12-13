@@ -12,12 +12,11 @@ export default function App() {
   const Tab = createBottomTabNavigator();
   return (
     <NavigationContainer >
-    <Tab.Navigator  initialRouteName="Login">
-      <Tab.Screen name="Login" component={Login}/>
+    <Tab.Navigator  initialRouteName="Login" screenOptions={ {tabBarVisible: false}}>
+      <Tab.Screen name="Login" component={Login} options={{tabBarVisible: false}}/>
     <Tab.Screen name="Carrinho" component={Carrinho}/>
         <Tab.Screen name="Home" component={Home}/>
     </Tab.Navigator>
-
     </NavigationContainer>
   );
 }

@@ -13,8 +13,6 @@ export default function Home(){
         <View style={styles.container} >
             
             <View>
-                <BarraEndereco />
-                <Button />
                 <Produtos />
             </View>
         </View>

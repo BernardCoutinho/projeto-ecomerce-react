@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import {View, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import axios from "axios";
-import { Button } from "react-native-elements";
+
 import CardProduto from '../CardProduto';
 
 export default function Produtos() {
