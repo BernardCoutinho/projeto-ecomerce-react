@@ -8,9 +8,10 @@ export default function Produtos() {
     const [produto,setProduto] = useState([]);
   
     const handleClick = async () => {
-      await  Api.get("/produtos").then((response) =>
-        console.log(setProduto(response.data))
-      ) 
+      await  Api.get("/produtos").then((response) =>{
+        setProduto(response.data)
+        console.log(response.data)
+      } ) 
         
     };
 
@@ -20,7 +21,7 @@ export default function Produtos() {
       <View>
         
         {produto?.map((produto)=>{
-         return( <CardProduto key={produto.id} uri={produto.imagens} 
+         return( <CardProduto key={produto.id} id={produto.id} uri={produto.imagens} 
           price={produto.vlUnitario} titulo={produto.nome}/>
             );
         })}

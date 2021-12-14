@@ -15,7 +15,7 @@ const Tab = createBottomTabNavigator();
 
   return (
     <Tab.Navigator  initialRouteName="Home" screenOptions={ {tabBarVisible: false}}>
-      <Tab.Screen name="Home" component={Home} options={{tabBarVisible: false}}/>
+      <Tab.Screen name="Home" component={Home} options={{headerShown: false}}/>
     <Tab.Screen name="Carrinho" component={Carrinho}/>
     </Tab.Navigator>
     

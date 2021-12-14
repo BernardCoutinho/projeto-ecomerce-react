@@ -25,5 +25,10 @@ export const geraProdutos = () =>{
     })
     
     }
+}
+
+export const itensCarrinho = () =>{
+
+    
 
 }

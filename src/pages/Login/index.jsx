@@ -11,11 +11,14 @@ export default function Login({navigation}){
     const emailCerto = 'batatinha@12345'
     const [senha, setSenha] = useState("");
     const [email, setEmail] = useState("");
+    const [erro, setError] = useState(false);
 
     
     const validar = () =>{
         if(senha == senhaCerta && email == emailCerto){
             navigation.navigate("Logout")
+        }else{
+            setError(true);
         }
 
 
@@ -42,6 +45,8 @@ export default function Login({navigation}){
                         placeholder="Digite sua senha!"
                         value={senha}
                         onChangeText={(value) => {setSenha(value)}} />
+
+                        {erro && <Text> Tá errado isso hein </Text>}
                        
                         <Button 
                         onPress={() => validar()}

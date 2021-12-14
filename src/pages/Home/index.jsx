@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {View, Text, TextInput, StyleSheet} from 'react-native';
+import {View, ScrollView, SafeAreaView,} from 'react-native';
 import {styles} from './style'
 import Produtos from '../../components/Produtos'
 
@@ -9,11 +9,11 @@ export default function Home(){
     const [getEndereco, setEndereco] = useState([]);
 
     return(
-        <View style={styles.container} >
-            
-            <View>
+        
+        <SafeAreaView>
+            <ScrollView>
                 <Produtos />
-            </View>
-        </View>
+            </ScrollView>
+        </SafeAreaView>
     )
 }

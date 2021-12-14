@@ -4,19 +4,25 @@ export  const styles = StyleSheet.create({
 
     container:{
         flex:1,
-        width: 80,
-        height: 80,
         backgroundColor: 'pink',
-        marginLeft: 10,
+        justifyContent: "center",
+        alignContent:"center",
+        
     },
 
     container1:{
         flex: 1,
         marginLeft: 200,
+        backgroundColor:"green",
+        margin: 10,
+        width:500,
+        height:500,
+        justifyContent: "center",
+        alignContent:"center",
     },
 
     img:{
-        width:20,
+        width:80,
         height:20,
     },
     

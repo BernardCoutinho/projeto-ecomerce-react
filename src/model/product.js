@@ -22,7 +22,7 @@ export default class Product extends BaseModel{
             nome: {type: types.TEXT, not_null:true},
             descricao: {type: types.TEXT, not_null:true},
             valor: {type: types.FLOAT, not_null:true},
-            uri: {type: types.TEXT, not_null:true}
+            uri: {type: types.TEXT, not_null:true},
         }
     }
 
