@@ -1,24 +1,24 @@
-import Product from "../model/product";
+import  ItemCarrinho from "../model/item_carrinho";
 
 export const createTable = async () => {
 
-    await Product.createTable();
+    await ItemCarrinho.createTable();
     console.log("tabela criada");
 };
 
-export const createProduto = async (nome, descricao, valor, uri) =>{
-    const novoProduto = new Product(nome, descricao, valor, uri)
-
+export const createItem = async (nome, descricao, valor, uri, quantidade) =>{
+    const novoItem = new ItemCarrinho({
+        nome: nome, 
+        descricao: descricao, 
+        valor: valor, 
+        uri: uri, 
+        quantidade: quantidade,
+    })
+    await novoItem.save();
 }
 
 export const geraProdutos = () =>{
-    const listProduto = [
-        {nome: "lasanha",
-        descricao: "salgado",
-        valor: 10.00,
-        uri: "https://www.sabornamesa.com.br/media/k2/items/cache/13b5e0deaf19b06816d21e67ad4e211c_XL.jpg" 
-       }
-    ]
+    const listProduto = []
 
     {listProduto.map((prod) =>{
         createProduto(prod.nome, prod.descricao, prod.valor, prod.uri)
@@ -29,6 +29,6 @@ export const geraProdutos = () =>{
 
 export const itensCarrinho = () =>{
 
-    
+
 
 }

@@ -7,7 +7,7 @@ import CardProduto from '../CardProduto';
 export default function Produtos() {
     const [produto,setProduto] = useState([]);
   
-    const handleClick = async () => {
+    const getProdutos = async () => {
       await  Api.get("/produtos").then((response) =>{
         setProduto(response.data)
         console.log(response.data)
@@ -15,7 +15,7 @@ export default function Produtos() {
         
     };
 
-      useEffect(()=>{handleClick()},[])
+      useEffect(()=>{getProdutos()},[])
     
       return (
       <View>

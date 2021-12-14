@@ -2,8 +2,6 @@ import React from 'react';
 import {View, Image, Stylesheet, Text} from 'react-native'
 import {styles} from "./styles"
 import {Button} from 'react-native-elements'
-
-import DetalheProduto from '../../pages/DetalheProduto';
 import { useNavigation } from '@react-navigation/native';
 
 export default function CardProduto(props){

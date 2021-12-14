@@ -3,6 +3,8 @@ import {View, Text, Image} from 'react-native';
 import axios from "axios";
 import { styles } from "./styles";
 import Api from "../../service/api"
+import { Button } from "react-native-elements";
+import  {createItem} from  '../../repository/productRepository';
 
 
   export default function DetalheProduto({route}) {
@@ -14,12 +16,21 @@ import Api from "../../service/api"
         console.log(response.data)
       } ) 
     };
+
+   
+
       useEffect(() =>{
         getDatabyId();
       }, [])
 
     const {id} = route.params
     console.log("id",)
+
+    
+
+   const onHandleClick = () => { 
+      createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario)
+   }
     
     return (
       <View style={styles.container1}>
@@ -31,7 +42,7 @@ import Api from "../../service/api"
             
             <Text> nome = {prod.nome} </Text>
             <Text> valor = {prod.vlUnitario} </Text>
-            <Text> </Text>
+            <Button title="adicionar" onPress={onHandleClick}/>
           </View>
         </View>
       </View>

@@ -1,7 +1,7 @@
 import * as SQLite from 'expo-sqlite'
 import {BaseModel, types} from 'expo-sqlite-orm'
 
-export default class Product extends BaseModel{
+export default class ItemCarrinho extends BaseModel{
 
     constructor(obj){
         super(obj)
@@ -12,7 +12,7 @@ export default class Product extends BaseModel{
     }
 
     static get tableName(){
-        return 'produtos'
+        return 'itens_carrinho'
     }
 
     static get columnMapping(){
@@ -23,6 +23,7 @@ export default class Product extends BaseModel{
             descricao: {type: types.TEXT, not_null:true},
             valor: {type: types.FLOAT, not_null:true},
             uri: {type: types.TEXT, not_null:true},
+            quantidade: {type: types.INTEGER, not_null:true},
         }
     }
 
