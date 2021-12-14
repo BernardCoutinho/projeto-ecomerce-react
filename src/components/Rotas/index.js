@@ -28,7 +28,7 @@ export const Routes = () =>{
     <Stack.Navigator>
       <Stack.Screen options={{headerShown: false}} name={"Login"} component={Login} />
       <Stack.Screen name={"Logout"} component={Tabs} />
-      <Stack.Screen name={"Detalhe"} component={DetalheProduto} />
+      <Stack.Screen options={{headerShown: false}} name={"Detalhe"} component={DetalheProduto} />
     </Stack.Navigator> 
   );
 }

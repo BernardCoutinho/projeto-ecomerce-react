@@ -4,6 +4,7 @@ import axios from "axios";
 import { styles } from "./styles";
 import Api from "../../service/api"
 
+
   export default function DetalheProduto({route}) {
 
     const [prod, setProd] = useState([]);

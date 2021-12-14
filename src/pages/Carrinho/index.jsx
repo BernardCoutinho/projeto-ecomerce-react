@@ -1,12 +1,17 @@
-import react from 'react'
+import react,{useEffect} from 'react'
 import {View, Text} from  'react-native'
 
 export default function Carrinho(){
 
-    return(
+    useEffect(() =>{
         
+    })
+
+    return(
+
         <View>
-            <Text>Carrinho de compras</Text>
+
+
         </View>
     )
 }
