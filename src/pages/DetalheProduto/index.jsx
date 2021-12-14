@@ -5,7 +5,7 @@ import { styles } from "./styles";
 import Api from "../../service/api"
 import { Button } from "react-native-elements";
 import  {createItem} from  '../../repository/productRepository';
-
+import CustomButton from "../../components/Button";
 
   export default function DetalheProduto({route}) {
 
@@ -16,9 +16,6 @@ import  {createItem} from  '../../repository/productRepository';
         console.log(response.data)
       } ) 
     };
-
-   
-
       useEffect(() =>{
         getDatabyId();
       }, [])
@@ -36,13 +33,15 @@ import  {createItem} from  '../../repository/productRepository';
       <View style={styles.container1}>
         <View>
            <View>
-             <Image style={{width: 200, height: 200  }} source ={{uri: prod.imagens}} resizeMode="cover"/>
+             <Image style={{width: 200, height: 200 }} source ={{uri: prod.imagens}} resizeMode="center"/>
           </View>
-          <View style={styles.container1}>
+          <View>
             
             <Text> nome = {prod.nome} </Text>
             <Text> valor = {prod.vlUnitario} </Text>
-            <Button title="adicionar" onPress={onHandleClick}/>
+            <Text> descrição = {prod.descricao} </Text>
+            
+          <CustomButton />
           </View>
         </View>
       </View>

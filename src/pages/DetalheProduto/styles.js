@@ -2,9 +2,9 @@ import { StyleSheet } from "react-native"
 
 export  const styles = StyleSheet.create({
 
-    container:{
+    btn:{
         flex:1,
-        backgroundColor: 'pink',
+        color: 'pink',
         justifyContent: "center",
         alignContent:"center",
         
@@ -12,7 +12,6 @@ export  const styles = StyleSheet.create({
 
     container1:{
         flex: 1,
-        marginLeft: 200,
         backgroundColor:"green",
         margin: 10,
         width:500,

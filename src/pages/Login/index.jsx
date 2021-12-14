@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {View, Text, TextInput, Linking} from 'react-native';
 import {style} from "./styles";
 import {Button} from 'react-native-elements';
+import CustomButton from "../../components/Button";
 
 
 
@@ -47,13 +48,8 @@ export default function Login({navigation}){
                         onChangeText={(value) => {setSenha(value)}} />
 
                         {erro && <Text> Tá errado isso hein </Text>}
-                       
-                        <Button 
-                        onPress={() => validar()}
-                        buttonStyle={style.botao} 
-                        title="Login"
-                        />
                 </View>   
+                    <CustomButton onPress ={()=> validar()} title={"Login"}/>
             </View>
         );
 }
