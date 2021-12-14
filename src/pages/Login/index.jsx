@@ -8,7 +8,7 @@ import {Button} from 'react-native-elements';
 export default function Login({navigation}){
 
     const senhaCerta = '12345';
-    const emailCerto = 'batatinha@12345'
+    const emailCerto = 'User'
     const [senha, setSenha] = useState("");
     const [email, setEmail] = useState("");
     const [erro, setError] = useState(false);

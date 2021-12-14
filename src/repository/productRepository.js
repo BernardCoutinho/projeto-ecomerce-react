@@ -17,6 +17,11 @@ export const createItem = async (nome, descricao, valor, uri, quantidade) =>{
     await novoItem.save();
 }
 
+export const getAllItens = async () =>{
+
+  return await ItemCarrinho.query();
+}
+
 export const geraProdutos = () =>{
     const listProduto = []
 

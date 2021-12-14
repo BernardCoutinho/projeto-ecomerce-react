@@ -13,6 +13,6 @@ export default function BarraEndereco(){
             value={endereco}
             onChangeText={(endereco) => {setEndereco(endereco)}}
             />
-    </View>
+        </View>
     )
 }

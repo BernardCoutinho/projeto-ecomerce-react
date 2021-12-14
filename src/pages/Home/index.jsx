@@ -1,19 +1,24 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {View, ScrollView, SafeAreaView,} from 'react-native';
 import {styles} from './style'
 import Produtos from '../../components/Produtos'
+import {createTable} from '../../repository/productRepository'
 
 import {Button} from 'react-native-elements';
 export default function Home(){
 
-    const [getEndereco, setEndereco] = useState([]);
+
+
+    useEffect(()=>{
+        createTable();
+    })
 
     return(
         
         <SafeAreaView>
-            <ScrollView>
+            <View style={styles.container}>
                 <Produtos />
-            </ScrollView>
+            </View>
         </SafeAreaView>
     )
 }

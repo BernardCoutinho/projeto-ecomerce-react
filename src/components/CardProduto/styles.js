@@ -4,8 +4,8 @@ export const styles = StyleSheet.create({
 
     container:{
         flex:1,
-        width: 100,
-        height: 50,
+        width: "100%",
+        height: "100%",
         backgroundColor: 'lime',
         margin: 15,
     },

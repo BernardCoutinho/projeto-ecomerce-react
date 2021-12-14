@@ -10,14 +10,13 @@ import  {createItem} from  '../../repository/productRepository';
   export default function DetalheProduto({route}) {
 
     const [prod, setProd] = useState([]);
+    const [quant, setQuant] = useState(null);
     const getDatabyId = async () => {
       await  Api.get(`/produtos/${id}`).then((response) =>{
         setProd(response.data)
         console.log(response.data)
       } ) 
     };
-
-   
 
       useEffect(() =>{
         getDatabyId();
@@ -28,8 +27,9 @@ import  {createItem} from  '../../repository/productRepository';
 
     
 
-   const onHandleClick = () => { 
-      createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario)
+   const onHandleClick = async () => { 
+      await createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario, quant)
+    
    }
     
     return (
@@ -42,6 +42,15 @@ import  {createItem} from  '../../repository/productRepository';
             
             <Text> nome = {prod.nome} </Text>
             <Text> valor = {prod.vlUnitario} </Text>
+            <View>
+            <TextInput type={Number}
+            style={styles.inserirQuantidade}
+            placeholder={"Insira seu endereço"}
+            value={quantidade}
+            onChangeText={(value) => {
+              setQuant(value)}}
+            />
+        </View>
             <Button title="adicionar" onPress={onHandleClick}/>
           </View>
         </View>
