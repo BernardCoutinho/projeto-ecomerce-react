@@ -4,8 +4,9 @@ import axios from "axios";
 import { styles } from "./styles";
 import Api from "../../service/api";
 import { createItem } from "../../repository/productRepository";
-import CustomButton from "../../components/Button";
 import { TouchableOpacity } from "react-native-web";
+import ButtonCar from "../../components/Buttoncar";
+
 
 export default function DetalheProduto({ route }) {
   const [prod, setProd] = useState([]);
@@ -32,13 +33,15 @@ export default function DetalheProduto({ route }) {
         <Image
           style={styles.img}
           source={{ uri: prod.imagens }}
-          resizeMode="center"
+          resizeMode="cover"
           />
+          <View style={styles.textContainer}>
           <Text style={styles.nomeP}>{prod.nome}</Text>
-          <Text>R$ {prod.vlUnitario}</Text>
+          <Text style={styles.preco}>R$ {prod.vlUnitario}</Text>
           <Text> descrição </Text>
           <Text>{prod.descricao}</Text>
-          <CustomButton title="Adicionar ao Carrinho" />
+          </View>
+          <ButtonCar/>
           </TouchableOpacity>
   );
 }
