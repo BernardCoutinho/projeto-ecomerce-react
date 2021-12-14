@@ -2,29 +2,37 @@ import { StyleSheet } from "react-native"
 
 export  const styles = StyleSheet.create({
 
-    btn:{
-        flex:1,
-        color: 'pink',
-        justifyContent: "center",
-        alignContent:"center",
-        
-    },
 
     container1:{
         flex: 1,
-        backgroundColor:"green",
-        margin: 10,
-        width:500,
-        height:500,
+        backgroundColor:"#ea5b2f",
         justifyContent: "center",
-        alignContent:"center",
+        alignItems:"center",
+        flexDirection:"column",
+        
+
+    },
+    texto:{
+        justifyContent: "center",
+        alignItems:"center",
+        fontSize:15,
+        margin:15
+
+    },
+    
+    img:{
+        width: '80%', 
+        height: 400,
+    
+    },
+    
+    nomeP:{
+        fontSize:26,
+        fontWeight:"bold",
+        textDecorationLine:"underline",
+        justifyContent: "center",
+        alignItems:"center", 
     },
 
-    img:{
-        width:80,
-        height:20,
-    },
-    
-    
 
 })
