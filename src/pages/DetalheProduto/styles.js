@@ -9,8 +9,6 @@ export  const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems:"center",
         flexDirection:"column",
-        
-
     },
     texto:{
         justifyContent: "center",
@@ -23,16 +21,26 @@ export  const styles = StyleSheet.create({
     img:{
         width: '80%', 
         height: 400,
-    
+        borderWidth:0.2,
     },
     
     nomeP:{
         fontSize:26,
         fontWeight:"bold",
-        textDecorationLine:"underline",
+        // textDecorationLine:"underline",
+        justifyContent: "center",
+        alignItems:"center", 
+    },
+    textContainer:{
+        fontSize:15,
         justifyContent: "center",
         alignItems:"center", 
     },
 
+    preco:{
+     fontSize:15,
+     fontWeight:"bold",
+     alignSelf:"center"
 
+    }
 })
