@@ -43,11 +43,12 @@ export default function DetalheProduto({ route }) {
           <Text>{prod.descricao}</Text>
          </View>
           <TextInput type={Number}
-            style={styles.inserirQuantidade}
+            style={styles.input}
             placeholder={"Insira a quantidade"}
             value={quant}
             onChangeText={(value) => {
               setQuant(value)}}
+              keyboardType="numeric"
             />
             <ButtonC onPress={onHandleClick}/>
           </TouchableOpacity>
