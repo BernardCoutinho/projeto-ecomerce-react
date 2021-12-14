@@ -3,7 +3,7 @@ import { TouchableOpacity, Text } from "react-native";
 import { styles } from "./styles";
 import { FontAwesome5 } from '@expo/vector-icons';
 
-export default function ButtonCar({ title, onPress, style }) {
+export default function ButtonC({ title, onPress, style }) {
   return (
     <TouchableOpacity
       style={style ? style : styles.container}
