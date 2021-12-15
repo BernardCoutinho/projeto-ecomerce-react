@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
  
 export default function DetalheProduto({route}) {
   const [prod, setProd] = useState([]);
-  const [quant, setQuant] = useState("");
+  const [quant, setQuant] = useState();
  
 
   const navigation = useNavigation();

@@ -23,7 +23,7 @@ export default class ItemCarrinho extends BaseModel{
             descricao: {type: types.TEXT, not_null:true},
             valor: {type: types.FLOAT, not_null:true},
             uri: {type: types.TEXT, not_null:true},
-            quantidade: {type: types.INTEGER, not_null:true},
+            quantidade: {type: types.NUMERIC, not_null:true},
         }
     }
 
