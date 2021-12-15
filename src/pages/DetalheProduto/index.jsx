@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Text, Image } from "react-native";
+import { Text, Image, TextInput, TouchableOpacity, View} from "react-native";
 import { styles } from "./styles";
-import CustomButton from "../../components/Button";
-import { TouchableOpacity } from "react-native-web";
 import Api from "../../service/api"
 import  {createItem} from  '../../repository/productRepository';
+import ButtonC from "../../components/Buttoncar";
+
+
 
 export default function DetalheProduto({ route }) {
   const [prod, setProd] = useState([]);
@@ -23,31 +24,37 @@ export default function DetalheProduto({ route }) {
   console.log("id");
 
   const onHandleClick = () => {
+
     createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario, quant);
+
   };
+  
 
   return (
 
         <TouchableOpacity style={styles.container1}>
-          
         <Image
           style={styles.img}
           source={{ uri: prod.imagens }}
-          resizeMode="center"
+          resizeMode="cover"
           />
           <Text style={styles.nomeP}>{prod.nome}</Text>
-          <Text>R$ {prod.vlUnitario}</Text>
+          <Text style={styles.preco}>R$ {prod.vlUnitario}</Text>
+         <View style={styles.textContainer}>
           <Text> descrição </Text>
           <Text>{prod.descricao}</Text>
+         </View>
           <TextInput type={Number}
-            style={styles.inserirQuantidade}
-            placeholder={"Insira seu endereço"}
-            value={quantidade}
+            style={styles.input}
+            placeholder={"Insira a quantidade"}
+            value={quant}
             onChangeText={(value) => {
               setQuant(value)}}
+              keyboardType="numeric"
             />
-          <CustomButton onPress={onHandleClick} title="Adicionar ao Carrinho" />
+            <ButtonC onPress={onHandleClick}/>
           </TouchableOpacity>
+          
 
   );
 }
