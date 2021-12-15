@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Text, Image, TextInput, TouchableOpacity, View} from "react-native";
+import { Text, Image, TextInput, View} from "react-native";
 import { styles } from "./styles";
 import Api from "../../service/api"
 import  {createItem} from  '../../repository/productRepository';
@@ -7,7 +7,7 @@ import { Button } from "react-native-elements";
 import BotaoC from "../../components/BotaoC";
 import { useNavigation } from '@react-navigation/native';
  
-export default function DetalheProduto({ route }) {
+export default function DetalheProduto({route}) {
   const [prod, setProd] = useState([]);
   const [quant, setQuant] = useState("");
  
@@ -24,7 +24,7 @@ export default function DetalheProduto({ route }) {
     getDatabyId();
   }, []);
 
-  const { id } = route.params;
+  const {id} = route.params;
   console.log("id");
 
   const onClickCreateItem = () => {

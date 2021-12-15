@@ -1,9 +1,7 @@
 import React from 'react';
-import {View, Image, Stylesheet, Text, TouchableHighlight, ScrollView, SafeAreaView, TouchableOpacity} from 'react-native'
+import {View, Image, Text, TouchableOpacity} from 'react-native'
 import { styles } from "./styles"
 import { useNavigation } from '@react-navigation/native';
-import Botao from '../Botao';
-import { useEffect } from 'react';
 
 
 export default function CardProduto(props){

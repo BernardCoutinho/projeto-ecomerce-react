@@ -2,7 +2,6 @@ import { faBeer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import React, {useState} from "react";
 import {View, Text, TextInput, SafeAreaView, Image,  TouchableOpacity} from 'react-native';
-import { ScrollView } from "react-native-gesture-handler";
 import { styles } from "./styles";
 
 

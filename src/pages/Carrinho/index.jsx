@@ -13,12 +13,12 @@ export default function Carrinho(){
     }, [])
 
     const atualizaLista = async () =>{
-        await setListaItemCarrinho(await getAllItens())
+     setListaItemCarrinho(await getAllItens())
     }
 
     const somaTotal = async () =>{
-        atualizaLista();
-        await listaItemCarrinho?.map((item)=>{
+        await atualizaLista();
+         listaItemCarrinho?.map((item)=>{
             setValorTotal(valorTotal + item.valor*item.quant)
         })
     }
