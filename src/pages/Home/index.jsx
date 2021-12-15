@@ -7,7 +7,7 @@ export default function Home(){
 
 
     useEffect(()=>{
-        createTable();
+      //  createTable();
     })
 
     return(
