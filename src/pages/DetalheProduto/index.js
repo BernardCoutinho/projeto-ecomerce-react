@@ -11,7 +11,7 @@ export default function DetalheProduto({ route }) {
   const [prod, setProd] = useState([]);
   const [quant, setQuant] = useState("");
 
-  const navigation = useNavigation();
+  
 
   const getDatabyId = async () => {
     await Api.get(`/produtos/${id}`).then((response) => {
@@ -90,9 +90,7 @@ export default function DetalheProduto({ route }) {
                   />
               </View>
             </View>
-              <BotaoC onPress={()=>{
-                console.log("funfou");
-                createItem(prod.name, prod.descricao, prod.vlUnitario, prod.uri, quant)}}/>
+              <BotaoC onPress={()=>{onClickCreateItem}}/>
           </View>
          
     </SafeAreaView>
