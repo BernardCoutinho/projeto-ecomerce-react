@@ -3,7 +3,7 @@ import { Text, Image, TextInput, TouchableOpacity, View} from "react-native";
 import { styles } from "./styles";
 import Api from "../../service/api"
 import  {createItem} from  '../../repository/productRepository';
-;
+import { Button } from "react-native-elements";
 import BotaoC from "../../components/BotaoC";
 import { useNavigation } from '@react-navigation/native';
  

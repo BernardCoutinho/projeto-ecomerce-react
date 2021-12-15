@@ -1,4 +1,4 @@
-import react,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import {View, Text} from  'react-native'
 import { Button } from 'react-native-elements';
 import {getAllItens, destroyItemById} from '../../repository/productRepository'
