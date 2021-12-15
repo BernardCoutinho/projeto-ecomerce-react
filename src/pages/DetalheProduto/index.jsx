@@ -4,12 +4,15 @@ import { styles } from "./styles";
 import Api from "../../service/api"
 import  {createItem} from  '../../repository/productRepository';
 import ButtonC from "../../components/Buttoncar";
-
-
-
+import {Button} from "react-native-elements"
+import { useNavigation } from '@react-navigation/native';
+ 
 export default function DetalheProduto({ route }) {
   const [prod, setProd] = useState([]);
-  const [quant, setQuant] = useState(null);
+  const [quant, setQuant] = useState("");
+
+  const navigation = useNavigation();
+
   const getDatabyId = async () => {
     await Api.get(`/produtos/${id}`).then((response) => {
       setProd(response.data);
@@ -28,11 +31,15 @@ export default function DetalheProduto({ route }) {
     createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario, quant);
 
   };
-  
 
+  const backToHome = ()=>{
+      navigation.navigate("Home")
+    }
+  
+  
   return (
 
-        <TouchableOpacity style={styles.container1}>
+        <View  style={styles.container1}>
         <Image
           style={styles.img}
           source={{ uri: prod.imagens }}
@@ -52,8 +59,9 @@ export default function DetalheProduto({ route }) {
               setQuant(value)}}
               keyboardType="numeric"
             />
+            <Button onPress={backToHome} title={"Voltar para home"}/>
             <ButtonC onPress={onHandleClick}/>
-          </TouchableOpacity>
+          </View>
           
 
   );

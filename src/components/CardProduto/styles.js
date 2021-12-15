@@ -11,14 +11,16 @@ export const styles = StyleSheet.create({
     },
 
     containerImg:{
-        width: 20,
-        height: 20,
+        width: 100,
+        height: 100,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        margin: 20,
     },
     img:{
         width:"100%",
         height:"100%",
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
+        
     },
 })
 

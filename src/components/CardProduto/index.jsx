@@ -10,18 +10,19 @@ export default function CardProduto(props){
     
 
     return(
-        <View style={styles.container}>
+        <View>
             <View style={styles.containerImg} > 
                 <Image  source={{uri: props.uri}}
                         style={styles.img}/>      
             </View>
 
-            <View>
-                <Text>preco={props.price} </Text>
-                <Text>titulo={props.titulo} </Text>
-                <Button  title="Detalhe" onPress={() =>{
+            <View style={{marginTop: 20}}>
+                <Text style={{fontSize:20}}>preco={props.price} </Text>
+                <Text style={{fontSize:20}}>titulo={props.titulo} </Text>
+
+                <Button  style={{width: "10%"}} title="Detalhe" onPress={() =>{
                     navigation.navigate("Detalhe", {id: props.id})
-                } } />
+                }} />
             </View>
                 
         </View>

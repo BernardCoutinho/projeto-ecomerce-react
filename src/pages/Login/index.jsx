@@ -5,16 +5,17 @@ import  beer from "../../../assets/beer.jpeg"
 
 export default function Login({navigation}){
 
-    const senhaCerta = '12345';
-    const emailCerto = 'User'
+    const senhaCerta = '';
+    const emailCerto = ''
     const [senha, setSenha] = useState("");
     const [email, setEmail] = useState("");
     const [erro, setError] = useState(false);
 
     
     const validar = () =>{
+
         if(senha == senhaCerta && email == emailCerto){
-            navigation.navigate("Logout")
+            navigation.navigate("Tabs")
         }else{
             setError(true);
         }
