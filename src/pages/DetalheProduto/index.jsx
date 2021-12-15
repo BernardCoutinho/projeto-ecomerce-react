@@ -3,8 +3,8 @@ import { Text, Image, TextInput, TouchableOpacity, View} from "react-native";
 import { styles } from "./styles";
 import Api from "../../service/api"
 import  {createItem} from  '../../repository/productRepository';
-import ButtonC from "../../components/Buttoncar";
-import {Button} from "react-native-elements"
+;
+import BotaoC from "../../components/BotaoC";
 import { useNavigation } from '@react-navigation/native';
  
 export default function DetalheProduto({ route }) {
@@ -75,7 +75,7 @@ export default function DetalheProduto({ route }) {
               keyboardType="numeric"
             />
             <Button onPress={backToHome} title={"Voltar para home"}/>
-            <ButtonC onPress={onClickCreateItem}/>
+            <BotaoC onPress={onClickCreateItem}/>
           </View>
           
 

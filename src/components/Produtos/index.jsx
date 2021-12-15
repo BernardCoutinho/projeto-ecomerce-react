@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
-import {View} from 'react-native';
-import axios from "axios";
+import {ScrollView, View} from 'react-native';
 import Api from '../../service/api'
 import CardProduto from '../CardProduto';
+import { styles } from './styles'
 
 export default function Produtos() {
     const [produto,setProduto] = useState([]);
@@ -18,13 +18,14 @@ export default function Produtos() {
       useEffect(()=>{getProdutos()},[])
     
       return (
-      <View>
-        
-        {produto?.map((produto)=>{
-         return( <CardProduto key={produto.id} id={produto.id} uri={produto.imagens} 
-          price={produto.vlUnitario} titulo={produto.nome}/>
-            );
-        })}
-      </View>
+            <ScrollView style={styles.container2}>
+              <View style={styles.container}>
+              {produto?.map((produto)=>{
+              return( <CardProduto key={produto.id} id={produto.id} uri={produto.imagens} 
+                price={produto.vlUnitario} titulo={produto.nome}/>
+                  );
+              })}
+              </View>
+            </ScrollView>
     );
   }

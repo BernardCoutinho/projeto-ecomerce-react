@@ -1,39 +1,52 @@
-import React, { useEffect, useState } from 'react';
-import {View, Image, Stylesheet, Text} from 'react-native'
-import {styles} from "./styles"
-import {Button} from 'react-native-elements'
+import React from 'react';
+import {View, Image, Stylesheet, Text, TouchableHighlight, ScrollView, SafeAreaView, TouchableOpacity} from 'react-native'
+import { styles } from "./styles"
 import { useNavigation } from '@react-navigation/native';
+import Botao from '../Botao';
+import { useEffect } from 'react';
+
 
 export default function CardProduto(props){
-    const navigation = useNavigation();
-    const [color, setColor] = useState()
-
-    useEffect(async () =>{
-        let valor = (props.id%2)
-        if(valor== 0){
-            setColor("red")
-        }else{
-            setColor("blue")
-        }
-    })
-
+    const navigation = useNavigation(); 
+    const {titulo, uri, price} = props
+    const estilo = (props.id % 2 == 0) ? styles.par : styles.impar;
+    
     return(
-        <View >
-            <View style={styles.containerImg} > 
-                <Image  source={{uri: props.uri}}
-                        style={styles.img}/>      
-            </View>
-
-            <View style={{marginTop: 20, backgroundColor: color}}>
-                <Text style={{fontSize:20}}>preco={props.price} </Text>
-                <Text style={{fontSize:20}}>titulo={props.titulo} </Text>
-
-                <Button  style={{width: "10%"}} title="Detalhe" onPress={() =>{
-                    navigation.navigate("Detalhe", {id: props.id})
-                }} />
-            </View>
-                
+        <View style={styles.containerexperimental}>
+            <TouchableOpacity style={[styles.container, estilo]}
+            onPress={(()=>{navigation.navigate("Detalhe", {id: props.id})})}>
+                <View style={styles.containerImg}>
+                    <Image
+                    style={styles.img}
+                    source={{
+                        uri: uri,
+                    }}
+                    />
+                </View>
+                <View style={styles.card}>
+                    <View style={styles.textcontainer}>
+                        <Text style={styles.texto1}>{titulo}</Text>
+                        <Text style={styles.texto2}>{price}</Text>
+                    </View>
+                </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.container2, estilo]}
+            onPress={(()=>{navigation.navigate("Detalhe", {id: props.id})})}>
+                <View style={styles.containerImg}>
+                    <Image
+                    style={styles.img}
+                    source={{
+                        uri: uri,
+                    }}
+                    />
+                </View>
+                <View style={styles.card}>
+                    <View style={styles.textcontainer}>
+                        <Text style={styles.texto1}>{titulo}</Text>
+                        <Text style={styles.texto2}>{price}</Text>
+                    </View>
+                </View>
+            </TouchableOpacity>
         </View>
-        
     )
 }
