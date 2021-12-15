@@ -28,7 +28,7 @@ export const geraProdutos = () =>{
     {listProduto.map((prod) =>{
         createProduto(prod.nome, prod.descricao, prod.valor, prod.uri)
     })
-    
+        
     }
 }
 

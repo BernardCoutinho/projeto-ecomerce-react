@@ -4,6 +4,7 @@ import {styles} from "./styles"
 import {Button} from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native';
 
+
 export default function CardProduto(props){
     const navigation = useNavigation();
     

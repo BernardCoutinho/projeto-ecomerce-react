@@ -1,53 +1,74 @@
 import { StyleSheet } from "react-native";
 
-export const style = StyleSheet.create({
+export const styles = StyleSheet.create({
+    
     container: {
         flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: 10,
+        backgroundColor: "#000000",
+          },
+      
+          
+      sectionStyle: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        borderWidth: 0.5,
+        borderColor: '#000',
+        height: 40,
+        borderRadius: 5,
+        margin: 10,
+      },
+      imageStyle: {
+        padding: 10,
+        margin: 5,
+        height: 25,
+        width: 25,
+        resizeMode: 'stretch',
+        alignItems: 'center',
+      },
+    
+    buttonImageIconStyle: {
+        padding: 10,
+        margin: 5,
+        height: 25,
+        width: 25,
+        resizeMode: "stretch",
+      },
+    
+     
+    
+      FotoTelaInicial: {
+        justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column",
-        backgroundColor:"#fff",
-        width:"100%",
-    },
- 
-    container1: {
-        display:"flex",
+        marginTop: 15,
+        marginBottom: 0,
+        backgroundColor: "#000000",
+        padding: 30,
+        flex: 1,
+        margin: 10,    
+      },
+    
+      buttonCervaStyle: {
+        flexDirection: "row",
         alignItems: "center",
-        backgroundColor: "#fff",
-        width:"100%",
-        height: "10%",
-        marginTop: "10%",
-        marginBottom:"10%",
-    },
-    container2: {
-        display: "flex",
-        alignItems: "center",
-        backgroundColor: "#fff",
-        width:"100%",
-        flexDirection: "column",
-        height: "25%",  
-    },
-
-    logo:{
-        
-        fontSize: 10,
-        
-    },
+        backgroundColor: "#ff8c00",
+        borderWidth: 0.5,
+        borderColor: "#fff",
+        height: 40,
+        borderRadius: 5,
+        margin: 5,
+        width: "30%",
+      },    
     
     inputTxt:{
         width: "80%",
         height: 40,
         marginTop: "5%",
-        // backgroundColor:"#F8F8FF",
-        borderRadius: 5,
         padding: 10,
-        borderWidth: 1,
-        borderColor: "grey",
 
-    },
-
-    botao:{
-        width: 200, 
-        marginTop: 20,  
-        marginBottom: 20,
-    },
+    },    
 });

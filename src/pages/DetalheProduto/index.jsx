@@ -5,7 +5,6 @@ import CustomButton from "../../components/Button";
 import { TouchableOpacity } from "react-native-web";
 import Api from "../../service/api"
 import  {createItem} from  '../../repository/productRepository';
-import { useNavigation } from '@react-navigation/native';
 
 export default function DetalheProduto({ route }) {
   const [prod, setProd] = useState([]);
@@ -24,7 +23,7 @@ export default function DetalheProduto({ route }) {
   console.log("id");
 
   const onHandleClick = () => {
-    createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario);
+    createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario, quant);
   };
 
   return (
