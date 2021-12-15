@@ -15,6 +15,7 @@ export const createItem = async (nome, descricao, valor, uri, quantidade) =>{
         quantidade: quantidade,
     })
     await novoItem.save();
+    console.log("adicionou ao carrinho");
 }
 
 export const destroyItemById = async (id) =>{

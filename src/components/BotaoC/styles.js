@@ -10,9 +10,7 @@ export const styles = StyleSheet.create ({
         width: '96%',
         backgroundColor:"#7cc633",
         borderWidth:1,
-        borderColor:'#ccebad',
-        marginTop:20 
-        
+        borderColor:'#ccebad',        
     },
     txt: {
         fontSize: 18,

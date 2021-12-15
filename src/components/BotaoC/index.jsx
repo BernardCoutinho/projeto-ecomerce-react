@@ -7,7 +7,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 export default function BotaoC() {
   return (
     <TouchableOpacity style={styles.container}>
-      <Text style={styles.txt}>Adicionar ao <FontAwesomeIcon icon={faShoppingCart} size={20} color="black" /></Text>
+      <Text style={styles.txt}>Adicionar ao carrinho</Text>
     </TouchableOpacity>
   );
 }

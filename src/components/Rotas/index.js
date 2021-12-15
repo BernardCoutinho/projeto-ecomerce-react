@@ -30,7 +30,7 @@ export const Routes = () =>{
     <Stack.Navigator>
       <Stack.Screen options={{headerShown: false}} name={"Login"} component={Login} />
       <Stack.Screen options={{headerShown: false}} name={"Tabs"} component={Tabs} />
-      <Stack.Screen options={{headerShown: false}} name={"Detalhe"} component={DetalheProduto} />
+      <Stack.Screen name={"Detalhe"} component={DetalheProduto} />
     </Stack.Navigator> 
   );
 }

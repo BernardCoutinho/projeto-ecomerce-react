@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Text, Image, TextInput, TouchableOpacity, View} from "react-native";
+import { Text, Image, TextInput, SafeAreaView, View} from "react-native";
 import { styles } from "./styles";
 import Api from "../../service/api"
 import  {createItem} from  '../../repository/productRepository';
 import BotaoC from "../../components/BotaoC";
-import { ScrollView } from "react-native-gesture-handler";
+import {Button} from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native';
 
 export default function DetalheProduto({ route }) {
   const [prod, setProd] = useState([]);
-  const [quant, setQuant] = useState(null);
+  const [quant, setQuant] = useState("");
 
   const navigation = useNavigation();
 
@@ -27,14 +27,10 @@ export default function DetalheProduto({ route }) {
   console.log("id");
 
   const onClickCreateItem = () => {
-
+      console.log("passou")
     createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario, quant);
 
   };
-
-  const backToHome = ()=>{
-      navigation.navigate("Home")
-    }
 
   function verificaQuantidade(text){
       let quantidade = '';
@@ -53,7 +49,7 @@ export default function DetalheProduto({ route }) {
   
   
   return (
-    <View style={styles.containerPage}> 
+    <SafeAreaView style={styles.containerPage}> 
           <View style={styles.header}>
             <Image
               style={styles.headerimg}
@@ -85,18 +81,21 @@ export default function DetalheProduto({ route }) {
                     />
                   </View>
                 <Text style={styles.preco}>R$ {prod.vlUnitario}</Text>
-                <TextInput type={Number}
+                <TextInput 
                   style={styles.input}
                   placeholder={"1"}
                   value={quant}
-                  onChangeText={verificaQuantidade}
+                  onChangeText={(value)=>{verificaQuantidade(value)}}
                     keyboardType="numeric"
                   />
               </View>
             </View>
-              <BotaoC onPress={onClickCreateItem}/>
+              <BotaoC onPress={()=>{
+                console.log("funfou");
+                createItem(prod.name, prod.descricao, prod.vlUnitario, prod.uri, quant)}}/>
           </View>
-    </View>
+         
+    </SafeAreaView>
           
 
   );

@@ -21,7 +21,7 @@ export  const styles = StyleSheet.create({
 
     header:{
         width:'100%',
-        height:'30%',
+        height:'35%',
         backgroundColor:'black',
     },
 
@@ -36,9 +36,9 @@ export  const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         width:'100%',
-        height: '40%',
+        height: '50%',
         margin: 10,
-        marginLeft: 15,
+        marginLeft: 13,
         marginRight: 15,
         position:'relative',
     },
@@ -77,7 +77,8 @@ export  const styles = StyleSheet.create({
     ratingcontainer:{
         width: '50%',
         height:'8%',
-        alignSelf: 'flex-start', 
+        alignSelf: 'flex-start',
+        marginTop: 6,
         marginLeft: 20,
     },
     rating:{
@@ -86,7 +87,7 @@ export  const styles = StyleSheet.create({
     },
     circlecontainer:{
         width:'38%',
-        height: '32%',
+        height: '37%',
         position:'absolute',
         right: -20,
         top: -15,
@@ -105,7 +106,7 @@ export  const styles = StyleSheet.create({
      borderRadius: 10,
      alignSelf: 'flex-start',
      marginLeft: 15,
-     marginTop:15,
+     marginTop:18,
     },
 
     descricao:{
@@ -118,14 +119,16 @@ export  const styles = StyleSheet.create({
         width:'100%',
     },
     input: {
-        height: 20,
+        width:'20%',
         alignSelf: 'flex-start',
-        marginTop: 10,
-        marginLeft: 18,
-        padding: 8,
+        marginTop: 17,
+        marginLeft: 16,
+        padding: 1,
         borderColor: 'gray',
         borderWidth: 1,
-        borderRadius: 5,
-        width: 25,
+        borderRadius: 8,
+        color:'black',
+        fontWeight:'bold',
+        textAlign:'center',
       },
 })
