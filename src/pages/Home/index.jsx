@@ -12,10 +12,6 @@ export default function Home({navigation}){
     const logout = ()=>{
         navigation.dispatch(StackActions.popToTop())
     }
-            
-          
-    
-    
 
     useEffect(()=>{
         // createTable();

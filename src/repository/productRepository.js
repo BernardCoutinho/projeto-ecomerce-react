@@ -17,6 +17,11 @@ export const createItem = async (nome, descricao, valor, uri, quantidade) =>{
     await novoItem.save();
 }
 
+export const destroyItemById = async (id) =>{
+    ItemCarrinho.destroy(id)
+}
+
+
 export const getAllItens = async () =>{
 
   return await ItemCarrinho.query();
@@ -28,7 +33,7 @@ export const geraProdutos = () =>{
     {listProduto.map((prod) =>{
         createProduto(prod.nome, prod.descricao, prod.valor, prod.uri)
     })
-        
+
     }
 }
 

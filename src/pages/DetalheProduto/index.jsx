@@ -10,6 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 export default function DetalheProduto({ route }) {
   const [prod, setProd] = useState([]);
   const [quant, setQuant] = useState("");
+ 
 
   const navigation = useNavigation();
 
@@ -26,7 +27,7 @@ export default function DetalheProduto({ route }) {
   const { id } = route.params;
   console.log("id");
 
-  const onHandleClick = () => {
+  const onClickCreateItem = () => {
 
     createItem(prod.name, prod.descricao, prod.vlUnitario, prod.vlUnitario, quant);
 
@@ -35,7 +36,21 @@ export default function DetalheProduto({ route }) {
   const backToHome = ()=>{
       navigation.navigate("Home")
     }
+
+  function verificaQuantidade(text){
+      let quantidade = '';
+      let numeros = '0123456789';
   
+      for (var i=0; i < text.length; i++) {
+          if(numeros.indexOf(text[i]) > -1 ) {
+              quantidade = quantidade + text[i];
+          }
+          else {
+              setQuant("")
+          }
+      }
+      setQuant(quantidade);
+  };
   
   return (
 
@@ -51,16 +66,16 @@ export default function DetalheProduto({ route }) {
           <Text> descrição </Text>
           <Text>{prod.descricao}</Text>
          </View>
-          <TextInput type={Number}
+          <TextInput 
             style={styles.input}
+            keyboardType='numeric'
             placeholder={"Insira a quantidade"}
             value={quant}
-            onChangeText={(value) => {
-              setQuant(value)}}
+            onChangeText={verificaQuantidade}
               keyboardType="numeric"
             />
             <Button onPress={backToHome} title={"Voltar para home"}/>
-            <ButtonC onPress={onHandleClick}/>
+            <ButtonC onPress={onClickCreateItem}/>
           </View>
           
 
